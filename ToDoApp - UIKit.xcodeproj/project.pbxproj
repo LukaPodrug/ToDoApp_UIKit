@@ -39,6 +39,9 @@
 		D1A4C7F22AA0CBBF00AA3E90 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1A4C7F12AA0CBBF00AA3E90 /* FirebaseRemoteConfigSwift */; };
 		D1A4C7F42AA0CBBF00AA3E90 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D1A4C7F32AA0CBBF00AA3E90 /* FirebaseStorage */; };
 		D1A4C7F62AA0CBBF00AA3E90 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D1A4C7F52AA0CBBF00AA3E90 /* FirebaseStorageCombine-Community */; };
+		D1A4C7FA2AA0CFE300AA3E90 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1A4C7F92AA0CFE300AA3E90 /* HomeView.xib */; };
+		D1A4C7FC2AA0CFFB00AA3E90 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4C7FB2AA0CFFB00AA3E90 /* HomeViewController.swift */; };
+		D1A4C7FE2AA0D06100AA3E90 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4C7FD2AA0D06100AA3E90 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		D1A4C7B22AA0C7BD00AA3E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A4C7B42AA0C7BD00AA3E90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1A4C7BE2AA0CB2B00AA3E90 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D1A4C7F92AA0CFE300AA3E90 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
+		D1A4C7FB2AA0CFFB00AA3E90 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D1A4C7FD2AA0D06100AA3E90 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +115,9 @@
 			isa = PBXGroup;
 			children = (
 				D1A4C7BB2AA0C97800AA3E90 /* Startup */,
-				D1A4C7BA2AA0C97200AA3E90 /* UI */,
+				D1A4C7F72AA0CE8200AA3E90 /* Models */,
+				D1A4C7F82AA0CE8E00AA3E90 /* Controllers */,
+				D1A4C7BA2AA0C97200AA3E90 /* Views */,
 				D1A4C7AF2AA0C7BD00AA3E90 /* Assets.xcassets */,
 				D1A4C7B42AA0C7BD00AA3E90 /* Info.plist */,
 				D1A4C7BE2AA0CB2B00AA3E90 /* GoogleService-Info.plist */,
@@ -117,11 +125,13 @@
 			path = "ToDoApp - UIKit";
 			sourceTree = "<group>";
 		};
-		D1A4C7BA2AA0C97200AA3E90 /* UI */ = {
+		D1A4C7BA2AA0C97200AA3E90 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D1A4C7F92AA0CFE300AA3E90 /* HomeView.xib */,
+				D1A4C7FD2AA0D06100AA3E90 /* HomeView.swift */,
 			);
-			path = UI;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D1A4C7BB2AA0C97800AA3E90 /* Startup */ = {
@@ -132,6 +142,21 @@
 				D1A4C7B12AA0C7BD00AA3E90 /* LaunchScreen.storyboard */,
 			);
 			path = Startup;
+			sourceTree = "<group>";
+		};
+		D1A4C7F72AA0CE8200AA3E90 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D1A4C7F82AA0CE8E00AA3E90 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1A4C7FB2AA0CFFB00AA3E90 /* HomeViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1A4C7B32AA0C7BD00AA3E90 /* LaunchScreen.storyboard in Resources */,
+				D1A4C7FA2AA0CFE300AA3E90 /* HomeView.xib in Resources */,
 				D1A4C7B02AA0C7BD00AA3E90 /* Assets.xcassets in Resources */,
 				D1A4C7BF2AA0CB2B00AA3E90 /* GoogleService-Info.plist in Resources */,
 			);
@@ -238,7 +264,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1A4C7A72AA0C7BD00AA3E90 /* AppDelegate.swift in Sources */,
+				D1A4C7FE2AA0D06100AA3E90 /* HomeView.swift in Sources */,
 				D1A4C7A92AA0C7BD00AA3E90 /* SceneDelegate.swift in Sources */,
+				D1A4C7FC2AA0CFFB00AA3E90 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
