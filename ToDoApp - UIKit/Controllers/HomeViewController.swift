@@ -22,6 +22,10 @@ class HomeViewController: UIViewController {
     }
     
     @objc func openAddModal() {
+        let addModalViewController = AddModalViewController()
         
+        let modalNavigationController = UINavigationController(rootViewController: addModalViewController)
+        
+        navigationController?.present(modalNavigationController, animated: true)
     }
 }
