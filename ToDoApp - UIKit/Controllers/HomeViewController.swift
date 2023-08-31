@@ -23,9 +23,15 @@ class HomeViewController: UIViewController {
     
     @objc func openAddModal() {
         let addModalViewController = AddModalViewController()
+        addModalViewController.addModalViewDelegate = self
         
         let modalNavigationController = UINavigationController(rootViewController: addModalViewController)
         
         navigationController?.present(modalNavigationController, animated: true)
+    }
+}
+
+extension HomeViewController: AddModalViewDelegate {
+    func addModalSubmit() {
     }
 }

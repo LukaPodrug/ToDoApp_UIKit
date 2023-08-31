@@ -7,11 +7,19 @@
 
 import UIKit
 
+protocol AddModalViewDelegate {
+    func addModalSubmit()
+}
+
 class AddModalViewController: UIViewController {
+    var addModalViewDelegate: AddModalViewDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationBarInitialization()
+        
+        let addModalView = view as! AddModalView
     }
     
     func navigationBarInitialization() {
@@ -20,6 +28,7 @@ class AddModalViewController: UIViewController {
     }
     
     @objc func submit() {
-        
+        addModalViewDelegate?.addModalSubmit()
+        dismiss(animated: true)
     }
 }
