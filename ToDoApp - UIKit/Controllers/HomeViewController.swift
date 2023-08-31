@@ -33,5 +33,6 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: AddModalViewDelegate {
     func addModalSubmit() {
+        
     }
 }
