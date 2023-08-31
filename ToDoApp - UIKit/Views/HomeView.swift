@@ -8,4 +8,5 @@
 import UIKit
 
 class HomeView: UIView {
+    @IBOutlet var tasksTableView: UITableView!
 }

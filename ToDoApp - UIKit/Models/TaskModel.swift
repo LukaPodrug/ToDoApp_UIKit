@@ -22,18 +22,22 @@ struct Task {
     let completion: Bool
 }
 
+let mockJobUUID = UUID()
+let mockHouseUUID = UUID()
+let mockSocialUUID = UUID()
+
 let mockTaskCategories = [
-    TaskCategory(id: UUID(uuidString: "1")!, name: "Job", color: .blue),
-    TaskCategory(id: UUID(uuidString: "2")!, name: "House", color: .red),
-    TaskCategory(id: UUID(uuidString: "3")!, name: "Social", color: .green)
+    TaskCategory(id: mockJobUUID, name: "Job", color: .blue),
+    TaskCategory(id: mockHouseUUID, name: "House", color: .red),
+    TaskCategory(id: mockSocialUUID, name: "Social", color: .green)
 ]
 
 let mockTasks = [
-    Task(id: UUID(), name: "Write unit tests", categoryId: UUID(uuidString: "1")!, deadline: Date(timeIntervalSinceNow: 8*60*60), completion: true),
-    Task(id: UUID(), name: "Clean dishes", categoryId: UUID(uuidString: "2")!, deadline: Date(timeIntervalSinceNow: 1*60*60), completion: false),
-    Task(id: UUID(), name: "Cinema with Marin", categoryId: UUID(uuidString: "3")!, deadline: Date(timeIntervalSinceNow: 4*60*60), completion: false),
-    Task(id: UUID(), name: "Date with Lucija", categoryId: UUID(uuidString: "3")!, deadline: Date(timeIntervalSinceNow: 3*60*60), completion: true),
-    Task(id: UUID(), name: "Refactor component", categoryId: UUID(uuidString: "1")!, deadline: Date(timeIntervalSinceNow: -2*60*60), completion: true),
-    Task(id: UUID(), name: "Buy mirror", categoryId: UUID(uuidString: "2")!, deadline: Date(timeIntervalSinceNow: -5*60*60), completion: false),
-    Task(id: UUID(), name: "Read documentation", categoryId: UUID(uuidString: "1")!, deadline: Date(timeIntervalSinceNow: 12*60*60), completion: false)
+    Task(id: UUID(), name: "Write unit tests", categoryId: mockJobUUID, deadline: Date(timeIntervalSinceNow: 8*60*60), completion: true),
+    Task(id: UUID(), name: "Clean dishes", categoryId: mockHouseUUID, deadline: Date(timeIntervalSinceNow: 1*60*60), completion: false),
+    Task(id: UUID(), name: "Cinema with Marin", categoryId: mockSocialUUID, deadline: Date(timeIntervalSinceNow: 4*60*60), completion: false),
+    Task(id: UUID(), name: "Date with Lucija", categoryId: mockSocialUUID, deadline: Date(timeIntervalSinceNow: 3*60*60), completion: true),
+    Task(id: UUID(), name: "Refactor component", categoryId: mockJobUUID, deadline: Date(timeIntervalSinceNow: -2*60*60), completion: true),
+    Task(id: UUID(), name: "Buy mirror", categoryId: mockHouseUUID, deadline: Date(timeIntervalSinceNow: -5*60*60), completion: false),
+    Task(id: UUID(), name: "Read documentation", categoryId: mockJobUUID, deadline: Date(timeIntervalSinceNow: 12*60*60), completion: false)
 ]
