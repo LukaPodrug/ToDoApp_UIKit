@@ -45,6 +45,7 @@
 		D1A4C8002AA0D81D00AA3E90 /* AddModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4C7FF2AA0D81D00AA3E90 /* AddModalView.swift */; };
 		D1A4C8022AA0D82D00AA3E90 /* AddModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1A4C8012AA0D82D00AA3E90 /* AddModalView.xib */; };
 		D1A4C8042AA0D86F00AA3E90 /* AddModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4C8032AA0D86F00AA3E90 /* AddModalViewController.swift */; };
+		D1A4C8062AA0DF2200AA3E90 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4C8052AA0DF2200AA3E90 /* TaskModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		D1A4C7FF2AA0D81D00AA3E90 /* AddModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModalView.swift; sourceTree = "<group>"; };
 		D1A4C8012AA0D82D00AA3E90 /* AddModalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddModalView.xib; sourceTree = "<group>"; };
 		D1A4C8032AA0D86F00AA3E90 /* AddModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModalViewController.swift; sourceTree = "<group>"; };
+		D1A4C8052AA0DF2200AA3E90 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		D1A4C7F72AA0CE8200AA3E90 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D1A4C8052AA0DF2200AA3E90 /* TaskModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			files = (
 				D1A4C7A72AA0C7BD00AA3E90 /* AppDelegate.swift in Sources */,
 				D1A4C7FE2AA0D06100AA3E90 /* HomeView.swift in Sources */,
+				D1A4C8062AA0DF2200AA3E90 /* TaskModel.swift in Sources */,
 				D1A4C7A92AA0C7BD00AA3E90 /* SceneDelegate.swift in Sources */,
 				D1A4C8002AA0D81D00AA3E90 /* AddModalView.swift in Sources */,
 				D1A4C8042AA0D86F00AA3E90 /* AddModalViewController.swift in Sources */,
