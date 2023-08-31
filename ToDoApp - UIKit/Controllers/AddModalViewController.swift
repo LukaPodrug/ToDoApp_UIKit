@@ -16,7 +16,7 @@ class AddModalViewController: UIViewController {
     
     func navigationBarInitialization() {
         navigationItem.title = "Add"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Submit", style: .done, target: self, action: #selector(submit))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "checkmark"), style: .plain, target: self, action: #selector(submit))
     }
     
     @objc func submit() {

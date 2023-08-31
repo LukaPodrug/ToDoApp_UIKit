@@ -18,7 +18,7 @@ class HomeViewController: UIViewController {
     
     func navigationBarInitialization() {
         navigationItem.title = "Home"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(openAddModal))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(openAddModal))
     }
     
     @objc func openAddModal() {
