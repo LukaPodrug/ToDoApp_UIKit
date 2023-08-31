@@ -6,7 +6,10 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseCore
+import FirebaseAnalytics
+import FirebaseCrashlytics
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
