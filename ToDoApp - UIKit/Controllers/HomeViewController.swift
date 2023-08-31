@@ -8,8 +8,20 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationBarInitialization()
+        
+        let homeView = view as! HomeView
+    }
+    
+    func navigationBarInitialization() {
+        navigationItem.title = "Home"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .done, target: self, action: #selector(openAddModal))
+    }
+    
+    @objc func openAddModal() {
+        
     }
 }
