@@ -16,19 +16,24 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHH-kF-mep">
-                        <rect key="frame" x="20" y="12" width="353" height="21"/>
+                        <rect key="frame" x="20" y="12" width="327" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jqk-z0-otV">
+                        <rect key="frame" x="355" y="9" width="27" height="27"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <accessibility key="accessibilityConfiguration" identifier="TaskCell"/>
             <connections>
-                <outlet property="taskLabel" destination="xHH-kF-mep" id="m5Q-4q-EEj"/>
+                <outlet property="completionImage" destination="Jqk-z0-otV" id="qTw-kz-y48"/>
+                <outlet property="taskName" destination="xHH-kF-mep" id="JFD-KA-iln"/>
             </connections>
-            <point key="canvasLocation" x="322.90076335877859" y="-204.22535211267606"/>
+            <point key="canvasLocation" x="319.84732824427482" y="-204.22535211267606"/>
         </tableViewCell>
     </objects>
 </document>

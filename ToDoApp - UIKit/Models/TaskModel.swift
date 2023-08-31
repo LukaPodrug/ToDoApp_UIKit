@@ -10,16 +10,16 @@ import UIKit
 
 struct TaskCategory {
     let id: UUID
-    let name: String
-    let color: UIColor
+    var name: String
+    var color: UIColor
 }
 
 struct Task {
     let id: UUID
-    let name: String
-    let categoryId: UUID
-    let deadline: Date
-    let completion: Bool
+    var name: String
+    var categoryId: UUID
+    var deadline: Date
+    var completion: Bool
 }
 
 let mockJobUUID = UUID()

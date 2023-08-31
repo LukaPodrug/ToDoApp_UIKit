@@ -8,17 +8,21 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    var taskCategories = mockTaskCategories
-    var tasks = mockTasks
+    var taskCategories: [TaskCategory] = []
+    var tasks: [Task] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        taskCategories = mockTaskCategories
+        tasks = mockTasks
         
         navigationBarInitialization()
         
         let homeView = view as! HomeView
         
         homeView.tasksTableView.dataSource = self
+        homeView.tasksTableView.delegate = self
         homeView.tasksTableView.register(UINib(nibName: "TaskCell", bundle: nil), forCellReuseIdentifier: "TaskCell")
     }
     
@@ -37,7 +41,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-extension HomeViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
     }
@@ -49,12 +53,31 @@ extension HomeViewController: UITableViewDataSource {
         
         let cell = homeView.tasksTableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskCell
         
-        cell.taskLabel.text = task.name
+        cell.taskName.text = task.name
+        if task.completion == true {
+            cell.completionImage.image = UIImage(systemName: "checkmark.circle.fill")
+        }
+        else {
+            cell.completionImage.image = UIImage(systemName: "circle")
+        }
         
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let homeView = view as! HomeView
+        
+        let selectedCell = homeView.tasksTableView.cellForRow(at: indexPath) as! TaskCell
+        
+        if tasks[indexPath.row].completion == true {
+            tasks[indexPath.row].completion = false
+            selectedCell.completionImage.image = UIImage(systemName: "circle")
+        }
+        else {
+            tasks[indexPath.row].completion = true
+            selectedCell.completionImage.image = UIImage(systemName: "checkmark.circle.fill")
+        }
+    }
 }
 
 extension HomeViewController: AddModalViewDelegate {

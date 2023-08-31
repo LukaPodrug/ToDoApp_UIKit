@@ -8,5 +8,6 @@
 import UIKit
 
 class TaskCell: UITableViewCell {
-    @IBOutlet var taskLabel: UILabel!
+    @IBOutlet var taskName: UILabel!
+    @IBOutlet var completionImage: UIImageView!
 }
