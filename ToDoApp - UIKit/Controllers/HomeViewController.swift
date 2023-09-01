@@ -28,7 +28,9 @@ class HomeViewController: UIViewController {
     
     func navigationBarInitialization() {
         navigationItem.title = "Home"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(openAddModal))
+        let addButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(openAddModal))
+        let categoriesButton = UIBarButtonItem(image: UIImage(systemName: "tray.2"), style: .plain, target: self, action: #selector(openAddModal))
+        navigationItem.rightBarButtonItems = [addButton, categoriesButton]
     }
     
     @objc func openAddModal() {
@@ -38,6 +40,14 @@ class HomeViewController: UIViewController {
         let modalNavigationController = UINavigationController(rootViewController: addModalViewController)
         
         navigationController?.present(modalNavigationController, animated: true)
+    }
+    
+    func deleteTask() {
+        
+    }
+    
+    func editTask() {
+        
     }
 }
 
@@ -84,22 +94,28 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return true
     }
     
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .normal, title: "Delete") { contextualAction, view, boolValue in
-            print("Delete")
-        }
-        
-        deleteAction.image = UIImage(systemName: "trash")
-        deleteAction.backgroundColor = .red
-        
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let editAction = UIContextualAction(style: .normal, title: "Edit") { contextualAction, view, boolValue in
-          print("Edit")
+            self.editTask()
         }
         
         editAction.image = UIImage(systemName: "pencil")
         editAction.backgroundColor = .blue
         
-        let swipeActions = UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+        let swipeActions = UISwipeActionsConfiguration(actions: [editAction])
+
+        return swipeActions
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .normal, title: "Delete") { contextualAction, view, boolValue in
+            self.deleteTask()
+        }
+        
+        deleteAction.image = UIImage(systemName: "trash")
+        deleteAction.backgroundColor = .red
+        
+        let swipeActions = UISwipeActionsConfiguration(actions: [deleteAction])
 
         return swipeActions
     }
