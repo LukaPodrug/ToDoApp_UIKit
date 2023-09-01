@@ -60,6 +60,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         else {
             cell.completionImage.image = UIImage(systemName: "circle")
         }
+        cell.selectionStyle = .none
         
         return cell
     }
@@ -77,6 +78,30 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             tasks[indexPath.row].completion = true
             selectedCell.completionImage.image = UIImage(systemName: "checkmark.circle.fill")
         }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .normal, title: "Delete") { contextualAction, view, boolValue in
+            print("Delete")
+        }
+        
+        deleteAction.image = UIImage(systemName: "trash")
+        deleteAction.backgroundColor = .red
+        
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { contextualAction, view, boolValue in
+          print("Edit")
+        }
+        
+        editAction.image = UIImage(systemName: "pencil")
+        editAction.backgroundColor = .blue
+        
+        let swipeActions = UISwipeActionsConfiguration(actions: [deleteAction, editAction])
+
+        return swipeActions
     }
 }
 
